@@ -26,6 +26,10 @@ body {
     text-align: center;
 }
 
+.close_button {
+    cursor: pointer;
+}
+
 .move_icon {
     height: 3rem;
 }

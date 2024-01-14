@@ -40,3 +40,9 @@ function makeMove(playerMove) {
     updateScoreElement();
     localStorage.removeItem('score');
 }
+
+function updateScoreElement() {
+    document.querySelector('.js_score').innerHTML = `
+    Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}
+  `;
+}

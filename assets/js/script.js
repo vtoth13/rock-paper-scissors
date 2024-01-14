@@ -1,8 +1,22 @@
+/* jshint esversion: 8 */
+
 let score = {
     wins: 0,
     losses: 0,
     ties: 0
 };
+
+document.getElementById('rockButton').addEventListener('click', function () {
+    makeMove('rock');
+});
+
+document.getElementById('paperButton').addEventListener('click', function () {
+    makeMove('paper');
+});
+
+document.getElementById('scissorsButton').addEventListener('click', function () {
+    makeMove('scissors');
+});
 
 const savedScore = JSON.parse(localStorage.getItem('score'));
 if (savedScore) {

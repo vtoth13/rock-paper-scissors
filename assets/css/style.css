@@ -14,3 +14,23 @@ body {
 .move_icon {
     height: 3rem;
 }
+
+.move_button {
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 3.75rem;
+    border: 3px solid white;
+    background-color: transparent;
+    margin-right: 0.625rem;
+    cursor: pointer;
+}
+
+.result {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 3.125rem;
+}
+
+.score {
+    margin-top: 3.75rem;
+}

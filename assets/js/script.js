@@ -37,5 +37,6 @@ function makeMove(playerMove) {
     <img src="assets/images/${computerMove}_emoji.png" class="move_icon"> Computer
     `;
 
-    updateScoreElement()
+    updateScoreElement();
+    localStorage.removeItem('score');
 }

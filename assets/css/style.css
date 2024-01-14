@@ -12,6 +12,20 @@ body {
     font-weight: bold;
 }
 
+.rules_popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1.25rem;
+}
+
+.popup_content {
+    text-align: center;
+}
+
 .move_icon {
     height: 3rem;
 }

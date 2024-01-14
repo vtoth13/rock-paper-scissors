@@ -17,19 +17,19 @@
     <p class="title">Rock Paper Scissors</p>
     <button onclick="
     makeMove('rock');
-    " class="move_button">
+    " class="move_button" aria-label="Rock">
         <img class="move_icon" src="assets/images/rock_emoji.png" alt="Rock Emoji">
     </button>
 
     <button onclick="
     makeMove('paper');
-    " class="move_button">
+    " class="move_button" aria-label="Paper">
         <img class="move_icon" src="assets/images/paper_emoji.png" alt="Paper Emoji">
     </button>
 
     <button onclick="
     makeMove('scissors');
-    " class="move_button">
+    " class="move_button" aria-label="Scissors">
         <img class="move_icon" src="assets/images/scissors_emoji.png" alt="Paper Emoji">
     </button>
 
@@ -39,7 +39,7 @@
     <p class="score js_score"></p>
     <button onclick="
     resetScore();
-    " class="reset_score_button">
+    " class="reset_score_button" aria-label="Reset">
         Reset Score
     </button>
 

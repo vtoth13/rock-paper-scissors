@@ -41,6 +41,32 @@ function makeMove(playerMove) {
     localStorage.removeItem('score');
 }
 
+function resetScore() {
+    score = {
+        wins: 0,
+        losses: 0,
+        ties: 0
+    };
+
+    updateScoreElement();
+    localStorage.removeItem('score');
+}
+
+function pickComputerMove() {
+    const randomNumber = Math.random();
+    let computerMove = 'rock';
+
+    if (randomNumber < (1 / 3)) {
+        computerMove = 'rock';
+    } else if (randomNumber < (2 / 3)) {
+        computerMove = 'paper';
+    } else {
+        computerMove = 'scissors';
+    }
+
+    return computerMove;
+}
+
 function updateScoreElement() {
     document.querySelector('.js_score').innerHTML = `
     Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}

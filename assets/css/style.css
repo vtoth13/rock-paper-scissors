@@ -23,7 +23,24 @@ body {
 }
 
 .popup_content {
-    text-align: center;
+    position: fixed;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup_content.open {
+    opacity: 1;
+    z-index: 999;
 }
 
 .close_button {

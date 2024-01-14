@@ -34,3 +34,11 @@ body {
 .score {
     margin-top: 3.75rem;
 }
+
+.reset_score_button {
+    background-color: white;
+    border: none;
+    font-size: 1.25rem;
+    padding: 8px 15px;
+    cursor: pointer;
+}

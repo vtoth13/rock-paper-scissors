@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+
+body {
+    background: black;
+    color: white;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.move_icon {
+    height: 3rem;
+}

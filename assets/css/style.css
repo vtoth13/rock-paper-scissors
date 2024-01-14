@@ -4,6 +4,7 @@ body {
     background: black;
     color: white;
     font-family: 'Unbounded', sans-serif;
+    margin-left: 3rem;
 }
 
 .title {

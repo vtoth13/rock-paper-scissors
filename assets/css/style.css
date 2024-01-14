@@ -38,6 +38,7 @@ body {
 
 .reset_score_button {
     background-color: white;
+    color: black;
     border: none;
     font-size: 1.25rem;
     padding: 8px 15px;

@@ -23,6 +23,38 @@ if (savedScore) {
     score = savedScore;
 }
 
+const modal = document.querySelector('#modal');
+const overlay = document.querySelector('#overlay');
+const btnCloseModal = document.querySelector('#closeModal');
+const btnOpenModal = document.querySelector('#openModal');
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    btnOpenModal.addEventListener('click', openModal);
+
+    btnCloseModal.addEventListener('click', closeModal);
+
+    overlay.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeModal();
+        }
+    });
+
+});
+
+
+const openModal = function () {
+    modal.classList.remove('modal_hidden');
+    overlay.classList.remove('overlay_hidden');
+};
+
+const closeModal = function () {
+    modal.classList.add('modal_hidden');
+    overlay.classList.add('overlay_hidden');
+};
+
 updateScoreElement();
 
 function makeMove(playerMove) {

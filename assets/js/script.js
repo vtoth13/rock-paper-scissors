@@ -6,23 +6,6 @@ let score = {
     ties: 0
 };
 
-document.getElementById('rockButton').addEventListener('click', function () {
-    makeMove('rock');
-});
-
-document.getElementById('paperButton').addEventListener('click', function () {
-    makeMove('paper');
-});
-
-document.getElementById('scissorsButton').addEventListener('click', function () {
-    makeMove('scissors');
-});
-
-const savedScore = JSON.parse(localStorage.getItem('score'));
-if (savedScore) {
-    score = savedScore;
-}
-
 document.getElementById('openPopup').addEventListener('click', function () {
     document.getElementById('overlay').style.display = 'block';
     document.getElementById('popup').style.display = 'block';
@@ -44,6 +27,23 @@ function handleKeyPress(event) {
         closePopup();
     }
 };
+
+document.getElementById('rockButton').addEventListener('click', function () {
+    makeMove('rock');
+});
+
+document.getElementById('paperButton').addEventListener('click', function () {
+    makeMove('paper');
+});
+
+document.getElementById('scissorsButton').addEventListener('click', function () {
+    makeMove('scissors');
+});
+
+const savedScore = JSON.parse(localStorage.getItem('score'));
+if (savedScore) {
+    score = savedScore;
+}
 
 updateScoreElement();
 

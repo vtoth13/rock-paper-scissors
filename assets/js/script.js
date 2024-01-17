@@ -23,36 +23,26 @@ if (savedScore) {
     score = savedScore;
 }
 
-const modal = document.querySelector('#modal');
-const overlay = document.querySelector('#overlay');
-const btnCloseModal = document.querySelector('#closeModal');
-const btnOpenModal = document.querySelector('#openModal');
-
-document.addEventListener('DOMContentLoaded', function () {
-
-    btnOpenModal.addEventListener('click', openModal);
-
-    btnCloseModal.addEventListener('click', closeModal);
-
-    overlay.addEventListener('click', closeModal);
-
-    document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
-            closeModal();
-        }
-    });
-
+document.getElementById('openPopup').addEventListener('click', function () {
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('popup').style.display = 'block';
+    document.addEventListener('keydown', handleKeyPress);
 });
 
+document.getElementById('closePopup').addEventListener('click', closePopup);
 
-const openModal = function () {
-    modal.classList.remove('modal_hidden');
-    overlay.classList.remove('overlay_hidden');
+document.getElementById('overlay').addEventListener('click', closePopup);
+
+function closePopup() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('popup').style.display = 'none';
+    document.removeEventListener('keydown', handleKeyPress);
 };
 
-const closeModal = function () {
-    modal.classList.add('modal_hidden');
-    overlay.classList.add('overlay_hidden');
+function handleKeyPress(event) {
+    if (event.keyCode === 27) {
+        closePopup();
+    }
 };
 
 updateScoreElement();

@@ -10,6 +10,16 @@ let score = {
 //Player's name variable
 let playerName;
 
+//
+const startButton = document.getElementById('start-game');
+const resultContainer = document.getElementById('section-results');
+const gameContainer = document.getElementById('game-container');
+
+const iniciateGame = function () {
+    resultContainer.classList.remove('hide');
+    gameContainer.classList.remove('hide');
+}
+startButton.addEventListener('click', iniciateGame())
 //Event listener to open popup game rules
 document.getElementById('openPopup').addEventListener('click', function () {
     document.getElementById('overlay').style.display = 'block';

@@ -110,22 +110,6 @@ function makeMove(playerMove) {
     localStorage.removeItem('score');
 }
 
-//Function to show overall winner
-function showWinner() {
-    const resultElement = document.getElementById('winner');
-    const popupResult = document.getElementById('popupResult');
-
-    if (score.wins > score.losses) {
-        resultElement.innerHTML = `$(playerName) is the overall winner!`;
-    } else if (score.losses > score.wins) {
-        resultElement.innerHTML = 'Computer is the overall winner!';
-    } else {
-        resultElement.innerHTML = 'The game ends in a tie!';
-    }
-
-    popupResult.style.display = 'block';
-}
-
 //Function to randomly pick the computer's move
 function pickComputerMove() {
     const randomNumber = Math.random();
@@ -148,3 +132,19 @@ function updateScoreElement() {
     Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}
   `;
 };
+
+//Function to show overall winner
+function showWinner() {
+    const resultElement = document.getElementById('winner');
+    const popupResult = document.getElementById('popupResult');
+
+    if (score.wins > score.losses) {
+        resultElement.innerHTML = `$(playerName) is the overall winner!`;
+    } else if (score.losses > score.wins) {
+        resultElement.innerHTML = 'Computer is the overall winner!';
+    } else {
+        resultElement.innerHTML = 'The game ends in a tie!';
+    }
+
+    popupResult.style.display = 'block';
+}

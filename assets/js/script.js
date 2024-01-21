@@ -178,4 +178,10 @@ function showWinner() {
     }
 
     popupResult.style.display = 'block';
+
+
+    //Hide the rock, paper and scissors buttons
+    document.getElementById('rockButton').style.display = 'none';
+    document.getElementById('paperButton').style.display = 'none';
+    document.getElementById('scissorsButton').style.display = 'none';
 }

@@ -103,6 +103,7 @@ function makeMove(playerMove) {
 
     //Check if the game has reached 10 rounds
     if (roundCount === 10) {
+        //Show overall winner
         showWinner();
     }
     //Remove the score from localStorage

@@ -95,6 +95,7 @@ function makeMove(playerMove) {
     const movesElement = document.querySelector('.js_moves_chosen');
     movesElement.innerHTML = `
     You <img src="assets/images/${playerMove}_emoji.png" class="move_icon">
+    |
     <img src="assets/images/${computerMove}_emoji.png" class="move_icon"> Computer
     `;
 

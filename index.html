@@ -18,7 +18,8 @@
         <p class="title">Rock Paper Scissors</p>
     </header>
     <main>
-        <button id="openPopup" aria-label="This button opens the rules of the game when clicked">Game Rules</button>
+        <button id="openPopup" class="game_rules" aria-label="This button opens the rules of the game when clicked">Game
+            Rules</button>
         <div class="overlay" id="overlay"></div>
         <div class="popup" id="popup">
             <h2>Game Rules</h2>
@@ -74,29 +75,35 @@
             </p>
             <button id="closePopup" aria-label="This button closes the game rules when clicked">Close</button>
         </div>
-        <button id="rockButton" class="move_button" aria-label="An image of a fist, which symbolise the Rock">
-            <img class="move_icon" src="assets/images/rock_emoji.png" alt="Rock Emoji">
-        </button>
+        <section class="game_buttons">
+            <button id="rockButton" class="move_button" aria-label="An image of a fist, which symbolise the Rock">
+                <img class="move_icon" src="assets/images/rock_emoji.png" alt="Rock Emoji">
+            </button>
 
-        <button id="paperButton" class="move_button" aria-label="An image of a hand, which symbolise the Paper">
-            <img class="move_icon" src="assets/images/paper_emoji.png" alt="Paper Emoji">
-        </button>
+            <button id="paperButton" class="move_button" aria-label="An image of a hand, which symbolise the Paper">
+                <img class="move_icon" src="assets/images/paper_emoji.png" alt="Paper Emoji">
+            </button>
 
-        <button id="scissorsButton" class="move_button"
-            aria-label="An image of a fist with the pointer and the middle finger extended, which symbolise the Scissors">
-            <img class="move_icon" src="assets/images/scissors_emoji.png" alt="Paper Emoji">
-        </button>
+            <button id="scissorsButton" class="move_button"
+                aria-label="An image of a fist with the pointer and the middle finger extended, which symbolise the Scissors">
+                <img class="move_icon" src="assets/images/scissors_emoji.png" alt="Paper Emoji">
+            </button>
+        </section>
+        <section>
 
-        <p class="result js_result"></p>
-        <p class="js_moves_chosen"></p>
+            <p class="result js_result"></p>
 
-        <p class="score js_score"></p>
-        <div id="popupResult" class="popup">
-            <h2>Game Result</h2>
-            <p id="winner"></p>
-            <button id="reloadButton">Yes</button>
-            <button id="closeResult">No</button>
-        </div>
+            <p class="js_moves_chosen moves"></p>
+
+            <p class="score js_score"></p>
+
+            <div id="popupResult" class="popup">
+                <h2>Game Result</h2>
+                <p id="winner"></p>
+                <button id="reloadButton">Yes</button>
+                <button id="closeResult">No</button>
+            </div>
+        </section>
     </main>
 
     <footer></footer>

@@ -8,6 +8,8 @@ let score = {
 
 let playerName;
 
+let roundCount = 0;
+
 document.getElementById('openPopup').addEventListener('click', function () {
     document.getElementById('overlay').style.display = 'block';
     document.getElementById('popup').style.display = 'block';
@@ -74,6 +76,8 @@ function makeMove(playerMove) {
         score.losses += 1;
     }
 
+    roundCount++;
+
     const movesElement = document.querySelector('.js_moves_chosen');
     movesElement.innerHTML = `
     You <img src="assets/images/${playerMove}_emoji.png" class="move_icon">
@@ -81,7 +85,27 @@ function makeMove(playerMove) {
     `;
 
     updateScoreElement();
+
+    if (roundCount === 10) {
+        showWinner();
+    }
+
     localStorage.removeItem('score');
+}
+
+function showWinner() {
+    const resultElement = document.getElementById('winner');
+    const popupResult = document.getElementById('popupResult');
+
+    if (score.wins > score.losses) {
+        resultElement.innerHTML = `$(playerName) is the overall winner!`;
+    } else if (score.losses > score.wins) {
+        resultElement.innerHTML = 'Computer is the overall winner!';
+    } else {
+        resultElement.innerHTML = 'The game ends in a tie!';
+    }
+
+    popupResult.style.display = 'block';
 }
 
 function resetScore() {
@@ -115,4 +139,4 @@ function updateScoreElement() {
     document.querySelector('.js_score').innerHTML = `
     Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}
   `;
-}
+};

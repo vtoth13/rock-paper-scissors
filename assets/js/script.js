@@ -10,7 +10,7 @@ let score = {
 //Player's name variable
 let playerName;
 
-//Event listener to open popup
+//Event listener to open popup game rules
 document.getElementById('openPopup').addEventListener('click', function () {
     document.getElementById('overlay').style.display = 'block';
     document.getElementById('popup').style.display = 'block';
@@ -132,6 +132,37 @@ function updateScoreElement() {
     Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}
   `;
 };
+
+//Round count variable
+let roundCount = 0;
+
+//Event listener to open the popup show results
+document.getElementById('openPopup').addEventListener('click', function () {
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('popup').style.display = 'block';
+    document.addEventListener('keydown', handleKeyPress);
+});
+
+// Event listener to close the popup
+document.getElementById('closePopup').addEventListener('click', closePopup);
+document.getElementById('closeResult').addEventListener('click', closeResult);
+
+// Event listener to close the popup when clicking on the overlay
+document.getElementById('overlay').addEventListener('click', closePopup);
+
+// Function to close the popup
+function closePopup() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('popup').style.display = 'none';
+    document.removeEventListener('keydown', handleKeyPress);
+}
+
+// Function to handle key presses
+function handleKeyPress(event) {
+    if (event.keyCode === 27) {
+        closePopup();
+    }
+}
 
 //Function to show overall winner
 function showWinner() {

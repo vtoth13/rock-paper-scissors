@@ -185,3 +185,10 @@ function showWinner() {
     document.getElementById('paperButton').style.display = 'none';
     document.getElementById('scissorsButton').style.display = 'none';
 }
+
+//Reload page when play again
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById('reloadButton').addEventListener('click', function () {
+        location.reload();
+    });
+});

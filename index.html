@@ -91,11 +91,11 @@
         <p class="js_moves_chosen"></p>
 
         <p class="score js_score"></p>
-        <button onclick="
-        resetScore();
-        " class="reset_score_button" aria-label="Restart button, when clicked, the game is going to restart">
-            Reset Score
-        </button>
+        <div id="popupResult" class="popup">
+            <h2>Game Result</h2>
+            <p id="winner"></p>
+            <button id="closeResult">close</button>
+        </div>
     </main>
 
     <footer></footer>

@@ -20,6 +20,7 @@ button {
     color: whitesmoke;
     padding: 0.5rem;
     font-size: 1.25rem;
+    cursor: pointer;
 }
 
 .game_rules {
@@ -84,6 +85,10 @@ button {
     background-color: transparent;
     margin-right: 0.625rem;
     cursor: pointer;
+}
+
+.move_button:hover {
+    box-shadow: 1px 1px 20px 10px whitesmoke;
 }
 
 .result {

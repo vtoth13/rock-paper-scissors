@@ -6,6 +6,8 @@ let score = {
     ties: 0
 };
 
+let playerName;
+
 document.getElementById('openPopup').addEventListener('click', function () {
     document.getElementById('overlay').style.display = 'block';
     document.getElementById('popup').style.display = 'block';
@@ -48,6 +50,11 @@ if (savedScore) {
 updateScoreElement();
 
 function makeMove(playerMove) {
+
+    if (!playerName) {
+        playerName = prompt("Please enter your name:")
+    }
+
     const computerMove = pickComputerMove();
     const resultElement = document.querySelector('.js_result')
 
@@ -84,6 +91,7 @@ function resetScore() {
         ties: 0
     };
 
+    playerName = null;
     updateScoreElement();
     localStorage.removeItem('score');
 }

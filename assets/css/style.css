@@ -10,9 +10,16 @@ body {
 .game_buttons,
 .moves,
 .result,
-.score {
+.score,
+footer {
     display: flex;
     justify-content: center;
+}
+
+a:link,
+a:visited {
+    color: white;
+    cursor: pointer;
 }
 
 button {

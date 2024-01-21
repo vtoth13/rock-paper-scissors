@@ -124,18 +124,6 @@ function showWinner() {
     popupResult.style.display = 'block';
 }
 
-function resetScore() {
-    score = {
-        wins: 0,
-        losses: 0,
-        ties: 0
-    };
-
-    playerName = null;
-    updateScoreElement();
-    localStorage.removeItem('score');
-}
-
 //Function to randomly pick the computer's move
 function pickComputerMove() {
     const randomNumber = Math.random();

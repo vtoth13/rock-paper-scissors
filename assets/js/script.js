@@ -170,7 +170,7 @@ function showWinner() {
     const popupResult = document.getElementById('popupResult');
 
     if (score.wins > score.losses) {
-        resultElement.innerHTML = `$(playerName) is the overall winner!`;
+        resultElement.innerHTML = `${playerName} is the overall winner!`;
     } else if (score.losses > score.wins) {
         resultElement.innerHTML = 'Computer is the overall winner!';
     } else {

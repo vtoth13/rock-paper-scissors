@@ -10,16 +10,19 @@ let score = {
 //Player's name variable
 let playerName;
 
-//
+//Get reference to the start button, result container, and game container
 const startButton = document.getElementById('start-game');
 const resultContainer = document.getElementById('section-results');
 const gameContainer = document.getElementById('game-container');
 
-const iniciateGame = function () {
+// Function to initiate the game
+const initiateGame = function () {
     resultContainer.classList.remove('hide');
     gameContainer.classList.remove('hide');
 }
-startButton.addEventListener('click', iniciateGame())
+
+startButton.addEventListener('click', initiateGame);
+
 //Event listener to open popup game rules
 document.getElementById('openPopup').addEventListener('click', function () {
     document.getElementById('overlay').style.display = 'block';

@@ -101,6 +101,7 @@ function makeMove(playerMove) {
     //Update the score element in the UI
     updateScoreElement();
 
+    //Check if the game has reached 10 rounds
     if (roundCount === 10) {
         showWinner();
     }

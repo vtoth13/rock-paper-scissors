@@ -8,7 +8,7 @@ let score = {
 };
 
 //Player's name variable
-let playerName;
+let playerName = localStorage.getItem("playerName");
 
 //Get reference to the start button, result container, and game container
 const startButton = document.getElementById('start-game');
@@ -19,6 +19,15 @@ const gameContainer = document.getElementById('game-container');
 const initiateGame = function () {
     resultContainer.classList.remove('hide');
     gameContainer.classList.remove('hide');
+
+    //Prompt for player's name
+    if (!playerName || playerName.trim() === "") {
+        do {
+            playerName = prompt("Please enter your name:");
+        } while (!playerName || playerName.trim() === "");
+
+        localStorage.setItem("playerName", playerName);
+    }
 }
 
 startButton.addEventListener('click', initiateGame);
@@ -74,11 +83,6 @@ updateScoreElement();
 
 //Function to handle player's move
 function makeMove(playerMove) {
-
-    //Prompt for player's name
-    if (!playerName) {
-        playerName = prompt("Please enter your name:")
-    }
 
     //Get the computer's move
     const computerMove = pickComputerMove();

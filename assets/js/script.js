@@ -163,7 +163,6 @@ document.getElementById('openPopup').addEventListener('click', function () {
 
 // Event listener to close the popup
 document.getElementById('closePopup').addEventListener('click', closePopup);
-document.getElementById('closeResult').addEventListener('click', closeResult);
 
 // Event listener to close the popup when clicking on the overlay
 document.getElementById('overlay').addEventListener('click', closePopup);
@@ -205,6 +204,13 @@ function showWinner() {
 }
 
 //Reload page when don't play again
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById('startAgain').addEventListener('click', function () {
+        location.reload();
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('reloadButton').addEventListener('click', function () {
         location.reload();

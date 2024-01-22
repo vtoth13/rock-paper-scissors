@@ -204,9 +204,10 @@ function showWinner() {
     document.getElementById('scissorsButton').style.display = 'none';
 }
 
-//Reload page when play again
+//Reload page when don't play again
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('reloadButton').addEventListener('click', function () {
         location.reload();
+        localStorage.removeItem('playerName');
     });
 });

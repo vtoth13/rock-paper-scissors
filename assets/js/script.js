@@ -188,11 +188,11 @@ function showWinner() {
     const popupResult = document.getElementById('popupResult');
 
     if (score.wins > score.losses) {
-        resultElement.innerHTML = `${playerName} is the overall winner!`;
+        resultElement.innerHTML = `${playerName} is the overall winner!<br>Do you want to play again?`;
     } else if (score.losses > score.wins) {
-        resultElement.innerHTML = 'Computer is the overall winner!';
+        resultElement.innerHTML = 'Computer is the overall winner!<br>Do you want to play again?';
     } else {
-        resultElement.innerHTML = 'The game ends in a tie!';
+        resultElement.innerHTML = 'The game ends in a tie!<br>Do you want to play again?';
     }
 
     popupResult.style.display = 'block';

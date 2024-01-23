@@ -7,13 +7,17 @@ body {
     margin-left: 3rem;
 }
 
-.game_buttons,
-.moves,
-.result,
-.score,
-footer {
+.center {
     display: flex;
     justify-content: center;
+}
+
+.start_button {
+    margin: 1.25rem;
+}
+
+.moves_left {
+    margin: 3rem;
 }
 
 a:link,

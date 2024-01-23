@@ -75,10 +75,10 @@
             </p>
             <button id="closePopup" aria-label="This button closes the game rules when clicked">Close</button>
         </div>
-        <div>
+        <div class="center start_button">
             <button id="start-game">Start Game</button>
         </div>
-        <section class="game_buttons hide" id="game-container">
+        <section class="game_buttons hide center" id="game-container">
             <button id="rockButton" class="move_button" aria-label="An image of a fist, which symbolise the Rock">
                 <img class="move_icon" src="assets/images/rock_emoji.png" alt="Rock Emoji">
             </button>
@@ -94,13 +94,13 @@
         </section>
         <section class="hide" id="section-results">
 
-            <p>Moves left: <span id="movesLeftDisplay">10</span></p>
+            <p class="center moves_left">Moves left: <span id="movesLeftDisplay"> 10</span></p>
 
-            <p class="result js_result"></p>
+            <p class="result js_result center"></p>
 
-            <p class="js_moves_chosen moves"></p>
+            <p class="js_moves_chosen center"></p>
 
-            <p class="score js_score"></p>
+            <p class="score js_score center"></p>
 
             <div id="popupResult" class="popup">
                 <h2>Game Result</h2>
@@ -111,7 +111,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="center">
         <p> Visit my
             <a href="https://github.com/vtoth13" target="_blank" aria-label="Click to visit my Github">
                 GitHub</a>

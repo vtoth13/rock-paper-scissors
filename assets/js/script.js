@@ -108,6 +108,7 @@ function makeMove(playerMove) {
         score.losses += 1;
     }
 
+    //Decreasing moves left
     movesLeft--;
 
     //Display the moves left in the UI
@@ -160,6 +161,7 @@ function updateScoreElement() {
   `;
 };
 
+//Variable for moves left
 let movesLeft = 10;
 
 //Event listener to open the popup show results
@@ -211,7 +213,7 @@ function showWinner() {
     document.getElementById('scissorsButton').style.display = 'none';
 }
 
-//Reload page when don't play again
+//Reload page when play again or not
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('startAgain').addEventListener('click', function () {

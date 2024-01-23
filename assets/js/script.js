@@ -17,6 +17,9 @@ const gameContainer = document.getElementById('game-container');
 
 // Function to initiate the game
 const initiateGame = function () {
+
+    startButton.style.display = 'none';
+
     resultContainer.classList.remove('hide');
     gameContainer.classList.remove('hide');
 

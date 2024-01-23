@@ -108,11 +108,21 @@ function makeMove(playerMove) {
     //Increment the round count
     roundCount++;
 
+    movesLeft--;
+
+    //Display the moves left in the UI
+    function updateMovesLeftDisplay() {
+        document.getElementById('movesLeftDisplay').textContent = movesLeft;
+    }
+
+    // Call the function initially to display the initial value
+    updateMovesLeftDisplay();
+
     //Display the chose move in the UI
     const movesElement = document.querySelector('.js_moves_chosen');
     movesElement.innerHTML = `
     ${playerName} <img src="assets/images/${playerMove}_emoji.png" class="move_icon">
-    |
+         |     
     <img src="assets/images/${computerMove}_emoji.png" class="move_icon"> Computer
     `;
 
@@ -153,6 +163,8 @@ function updateScoreElement() {
 
 //Round count variable
 let roundCount = 0;
+
+let movesLeft = 10;
 
 //Event listener to open the popup show results
 document.getElementById('openPopup').addEventListener('click', function () {

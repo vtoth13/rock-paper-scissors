@@ -12,10 +12,6 @@ body {
     justify-content: center;
 }
 
-.start_button {
-    margin: 1.25rem;
-}
-
 .moves_left {
     margin: 3rem;
 }
@@ -34,8 +30,31 @@ button {
     cursor: pointer;
 }
 
+.start_button {
+    margin: 1.25rem;
+}
+
+.start_button button {
+    background-color: #f2c255;
+    color: black;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+.start_button button:hover {
+    background-color: black;
+    color: #f2c255;
+    border: 2px solid #f2c255;
+    font-weight: bold;
+}
+
 .game_rules {
     background-color: whitesmoke;
+    color: black;
+}
+
+.game_rules:hover {
+    background-color: #f2c255;
     color: black;
 }
 

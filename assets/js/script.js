@@ -105,9 +105,6 @@ function makeMove(playerMove) {
         score.losses += 1;
     }
 
-    //Increment the round count
-    roundCount++;
-
     movesLeft--;
 
     //Display the moves left in the UI
@@ -130,7 +127,7 @@ function makeMove(playerMove) {
     updateScoreElement();
 
     //Check if the game has reached 10 rounds
-    if (roundCount === 10) {
+    if (movesLeft === 0) {
         //Show overall winner
         showWinner();
     }
@@ -160,9 +157,6 @@ function updateScoreElement() {
     Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}
   `;
 };
-
-//Round count variable
-let roundCount = 0;
 
 let movesLeft = 10;
 
@@ -221,9 +215,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('startAgain').addEventListener('click', function () {
         location.reload();
     });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('reloadButton').addEventListener('click', function () {
         alert("Thanks for playing!");
         location.reload();

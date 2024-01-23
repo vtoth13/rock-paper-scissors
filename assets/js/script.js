@@ -225,6 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('reloadButton').addEventListener('click', function () {
+        alert("Thanks for playing!");
         location.reload();
         localStorage.removeItem('playerName');
     });

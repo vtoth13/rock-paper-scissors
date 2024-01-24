@@ -141,7 +141,6 @@ function makeMove(playerMove) {
 //Function to randomly pick the computer's move
 function pickComputerMove() {
     const randomNumber = Math.random();
-    let computerMove = 'rock';
 
     if (randomNumber < (1 / 3)) {
         computerMove = 'rock';

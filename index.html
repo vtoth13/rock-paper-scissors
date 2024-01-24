@@ -2,23 +2,31 @@
 <html lang="en">
 
 <head>
+    <!-- Metadata for document -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The classic Rock, Paper, Scissors game's modern edition">
     <meta name="keywords" content="Rock Paper Scissors, Game, Player, Score, Rounds, Move, Winner">
     <meta name="author" content="Viktoria Julia Toth">
+
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Game title -->
     <title>
         Rock Paper Scissors
     </title>
 </head>
 
 <body>
+    <!-- Header section -->
     <header>
         <h1 class="title">Rock Paper Scissors</h1>
     </header>
+    <!-- Main content -->
     <main>
+        <!-- Game Rules Popup -->
         <button id="openPopup" class="game_rules" aria-label="This button opens the game rules">Game
             Rules</button>
         <div class="overlay" id="overlay"></div>
@@ -29,6 +37,7 @@
                 that
                 beats their chosen item.
             </p>
+            <!-- List of game items -->
             <div>
                 Items:
                 <ol>
@@ -38,6 +47,7 @@
                         paper.</li>
                 </ol>
             </div>
+            <!-- Winning and Losing clarification -->
             <div>
                 Winning and Losing
                 <ul>
@@ -56,6 +66,7 @@
                 Ties: If both players shoose the same item, the game is a tie, and it is usually played again to
                 determine the winner.
             </p>
+            <!-- How to Play section -->
             <div>
                 How to Play:
                 <ol>
@@ -74,11 +85,16 @@
                     </li>
                 </ol>
             </div>
+            <!-- Close button for the popup -->
             <button id="closePopup" aria-label="This button closes the game rules when clicked">Close</button>
         </div>
+
+        <!-- Start Game Button -->
         <div class="center start_button">
             <button id="start-game">Start Game</button>
         </div>
+
+        <!-- Game Buttons Section -->
         <section class="game_buttons hide center" id="game-container">
             <button id="rockButton" class="move_button" aria-label="An image of a fist, which symbolise the Rock">
                 <img class="move_icon" src="assets/images/rock_emoji.png" alt="Rock Emoji">
@@ -93,6 +109,8 @@
                 <img class="move_icon" src="assets/images/scissors_emoji.png" alt="Paper Emoji">
             </button>
         </section>
+
+        <!-- Results Section -->
         <section class="hide" id="section-results">
 
             <p class="center moves_left">Moves left: <span id="movesLeftDisplay"> 10</span></p>
@@ -103,6 +121,7 @@
 
             <p class="score js_score center"></p>
 
+            <!-- Popup for Game Result -->
             <div id="popupResult" class="popup">
                 <h2>Game Result</h2>
                 <p id="winner"></p>
@@ -112,6 +131,7 @@
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer class="center">
         <p> Visit my
             <a href="https://github.com/vtoth13" target="_blank" aria-label="Click to visit my Github">
@@ -119,6 +139,7 @@
         </p>
     </footer>
 
+    <!-- JavaScript file inclusion -->
     <script src="assets/js/script.js"></script>
 </body>
 

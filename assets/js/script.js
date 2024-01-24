@@ -10,6 +10,12 @@ let score = {
 //Player's name variable
 let playerName = localStorage.getItem("playerName");
 
+//Display results in UI
+const resultElement = document.querySelector('.js_result');
+
+//Variable for moves left
+let movesLeft = 10;
+
 //Get reference to the start button, result container, and game container
 const startButton = document.getElementById('start-game');
 const resultContainer = document.getElementById('section-results');
@@ -89,7 +95,6 @@ function makeMove(playerMove) {
 
     //Get the computer's move
     const computerMove = pickComputerMove();
-    const resultElement = document.querySelector('.js_result');
 
     //Determine the result of the round
     if (playerMove === computerMove) {
@@ -159,9 +164,6 @@ function updateScoreElement() {
     Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}
   `;
 }
-
-//Variable for moves left
-let movesLeft = 10;
 
 //Event listener to open the popup show results
 document.getElementById('openPopup').addEventListener('click', function () {

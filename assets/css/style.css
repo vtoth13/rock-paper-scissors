@@ -35,16 +35,16 @@ button {
 }
 
 .start_button button {
-    background-color: #f2c255;
-    color: black;
+    background-color: rgb(235, 50, 44);
+    color: white;
     border: 2px solid white;
     font-weight: bold;
 }
 
 .start_button button:hover {
     background-color: black;
-    color: #f2c255;
-    border: 2px solid #f2c255;
+    color: rgb(235, 50, 44);
+    border: 2px solid rgb(235, 50, 44);
     font-weight: bold;
 }
 
@@ -54,8 +54,8 @@ button {
 }
 
 .game_rules:hover {
-    background-color: #f2c255;
-    color: black;
+    background-color: rgb(235, 50, 44);
+    color: white;
 }
 
 .title {

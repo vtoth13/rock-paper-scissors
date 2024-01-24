@@ -21,7 +21,7 @@ const startButton = document.getElementById('start-game');
 const resultContainer = document.getElementById('section-results');
 const gameContainer = document.getElementById('game-container');
 
-// Function to initiate the game
+/**Function to initiate the game */
 const initiateGame = function () {
 
     startButton.style.display = 'none';
@@ -54,14 +54,14 @@ document.getElementById('closePopup').addEventListener('click', closePopup);
 //Event listener to close popup when clicking overlay
 document.getElementById('overlay').addEventListener('click', closePopup);
 
-//Function to close popup
+/**Function to close popup */
 function closePopup() {
     document.getElementById('overlay').style.display = 'none';
     document.getElementById('popup').style.display = 'none';
     document.removeEventListener('keydown', handleKeyPress);
 }
 
-//Function to handle key press Esc
+/**Function to handle key press Esc */
 function handleKeyPress(event) {
     if (event.keyCode === 27) {
         closePopup();
@@ -90,7 +90,7 @@ if (savedScore) {
 //Update score element in the UI
 updateScoreElement();
 
-//Function to handle player's move
+/**Function to handle player's move */
 function makeMove(playerMove) {
 
     //Get the computer's move
@@ -116,7 +116,7 @@ function makeMove(playerMove) {
     //Decreasing moves left
     movesLeft--;
 
-    //Display the moves left in the UI
+    /**Display the moves left in the UI */
     function updateMovesLeftDisplay() {
         document.getElementById('movesLeftDisplay').textContent = movesLeft;
     }
@@ -143,7 +143,7 @@ function makeMove(playerMove) {
     localStorage.removeItem('score');
 }
 
-//Function to randomly pick the computer's move
+/**Function to randomly pick the computer's move */
 function pickComputerMove() {
     const randomNumber = Math.random();
 
@@ -158,7 +158,7 @@ function pickComputerMove() {
     return computerMove;
 }
 
-//Function to update the score element
+/**Function to update the score element */
 function updateScoreElement() {
     document.querySelector('.js_score').innerHTML = `
     Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}
@@ -178,21 +178,21 @@ document.getElementById('closePopup').addEventListener('click', closePopup);
 // Event listener to close the popup when clicking on the overlay
 document.getElementById('overlay').addEventListener('click', closePopup);
 
-// Function to close the popup
+/**Function to close the popup */
 function closePopup() {
     document.getElementById('overlay').style.display = 'none';
     document.getElementById('popup').style.display = 'none';
     document.removeEventListener('keydown', handleKeyPress);
 }
 
-// Function to handle key presses
+/**Function to handle key presses */
 function handleKeyPress(event) {
     if (event.keyCode === 27) {
         closePopup();
     }
 }
 
-//Function to show overall winner
+/**Function to show overall winner */
 function showWinner() {
     const resultElement = document.getElementById('winner');
     const popupResult = document.getElementById('popupResult');

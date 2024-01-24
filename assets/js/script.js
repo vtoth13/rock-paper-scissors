@@ -31,7 +31,7 @@ const initiateGame = function () {
 
         localStorage.setItem("playerName", playerName);
     }
-}
+};
 
 startButton.addEventListener('click', initiateGame);
 
@@ -53,14 +53,14 @@ function closePopup() {
     document.getElementById('overlay').style.display = 'none';
     document.getElementById('popup').style.display = 'none';
     document.removeEventListener('keydown', handleKeyPress);
-};
+}
 
 //Function to handle key press Esc
 function handleKeyPress(event) {
     if (event.keyCode === 27) {
         closePopup();
     }
-};
+}
 
 //Event listener for rock, paper and scissors button
 document.getElementById('rockButton').addEventListener('click', function () {
@@ -89,7 +89,7 @@ function makeMove(playerMove) {
 
     //Get the computer's move
     const computerMove = pickComputerMove();
-    const resultElement = document.querySelector('.js_result')
+    const resultElement = document.querySelector('.js_result');
 
     //Determine the result of the round
     if (playerMove === computerMove) {
@@ -159,7 +159,7 @@ function updateScoreElement() {
     document.querySelector('.js_score').innerHTML = `
     Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}
   `;
-};
+}
 
 //Variable for moves left
 let movesLeft = 10;

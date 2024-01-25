@@ -27,7 +27,7 @@
     <!-- Main content -->
     <main>
         <!-- Game Rules Popup -->
-        <button id="openPopup" class="game_rules" aria-label="This button opens the game rules">Game
+        <button id="open-popup" class="game_rules" aria-label="This button opens the game rules">Game
             Rules</button>
         <div class="overlay" id="overlay"></div>
         <div class="popup" id="popup">
@@ -86,7 +86,7 @@
                 </ol>
             </div>
             <!-- Close button for the popup -->
-            <button id="closePopup" aria-label="This button closes the game rules when clicked">Close</button>
+            <button id="close-popup" aria-label="This button closes the game rules when clicked">Close</button>
         </div>
 
         <!-- Start Game Button -->
@@ -96,15 +96,15 @@
 
         <!-- Game Buttons Section -->
         <section class="game_buttons hide center" id="game-container">
-            <button id="rockButton" class="move_button" aria-label="An image of a fist, which symbolise the Rock">
+            <button id="rock-button" class="move_button" aria-label="An image of a fist, which symbolise the Rock">
                 <img class="move_icon" src="assets/images/rock_emoji.png" alt="Rock Emoji">
             </button>
 
-            <button id="paperButton" class="move_button" aria-label="An image of a hand, which symbolise the Paper">
+            <button id="paper-button" class="move_button" aria-label="An image of a hand, which symbolise the Paper">
                 <img class="move_icon" src="assets/images/paper_emoji.png" alt="Paper Emoji">
             </button>
 
-            <button id="scissorsButton" class="move_button"
+            <button id="scissors-button" class="move_button"
                 aria-label="An image of a fist with the pointer and the middle finger extended, which symbolise the Scissors">
                 <img class="move_icon" src="assets/images/scissors_emoji.png" alt="Paper Emoji">
             </button>
@@ -113,7 +113,7 @@
         <!-- Results Section -->
         <section class="hide" id="section-results">
 
-            <p class="center moves_left">Moves left: <span id="movesLeftDisplay"> 10</span></p>
+            <p class="center moves_left">Moves left: <span id="moves-left-display"> 10</span></p>
 
             <p class="result js_result center"></p>
 
@@ -122,11 +122,11 @@
             <p class="score js_score center"></p>
 
             <!-- Popup for Game Result -->
-            <div id="popupResult" class="popup">
+            <div id="popup-result" class="popup">
                 <h2>Game Result</h2>
                 <p id="winner"></p>
-                <button id="startAgain">Yes</button>
-                <button id="reloadButton">No</button>
+                <button id="start-again">Yes</button>
+                <button id="reload-button">No</button>
             </div>
         </section>
     </main>

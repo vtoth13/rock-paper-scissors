@@ -42,14 +42,14 @@ const initiateGame = function () {
 startButton.addEventListener('click', initiateGame);
 
 //Event listener to open popup game rules
-document.getElementById('openPopup').addEventListener('click', function () {
+document.getElementById('open-popup').addEventListener('click', function () {
     document.getElementById('overlay').style.display = 'block';
     document.getElementById('popup').style.display = 'block';
     document.addEventListener('keydown', handleKeyPress);
 });
 
 //Event listener to close popup
-document.getElementById('closePopup').addEventListener('click', closePopup);
+document.getElementById('close-popup').addEventListener('click', closePopup);
 
 //Event listener to close popup when clicking overlay
 document.getElementById('overlay').addEventListener('click', closePopup);
@@ -69,15 +69,15 @@ function handleKeyPress(event) {
 }
 
 //Event listener for rock, paper and scissors button
-document.getElementById('rockButton').addEventListener('click', function () {
+document.getElementById('rock-button').addEventListener('click', function () {
     makeMove('rock');
 });
 
-document.getElementById('paperButton').addEventListener('click', function () {
+document.getElementById('paper-button').addEventListener('click', function () {
     makeMove('paper');
 });
 
-document.getElementById('scissorsButton').addEventListener('click', function () {
+document.getElementById('scissors-button').addEventListener('click', function () {
     makeMove('scissors');
 });
 
@@ -118,7 +118,7 @@ function makeMove(playerMove) {
 
     /**Display the moves left in the UI */
     function updateMovesLeftDisplay() {
-        document.getElementById('movesLeftDisplay').textContent = movesLeft;
+        document.getElementById('moves-left-display').textContent = movesLeft;
     }
 
     // Call the function initially to display the initial value
@@ -166,14 +166,14 @@ function updateScoreElement() {
 }
 
 //Event listener to open the popup show results
-document.getElementById('openPopup').addEventListener('click', function () {
+document.getElementById('open-popup').addEventListener('click', function () {
     document.getElementById('overlay').style.display = 'block';
     document.getElementById('popup').style.display = 'block';
     document.addEventListener('keydown', handleKeyPress);
 });
 
 // Event listener to close the popup
-document.getElementById('closePopup').addEventListener('click', closePopup);
+document.getElementById('close-popup').addEventListener('click', closePopup);
 
 // Event listener to close the popup when clicking on the overlay
 document.getElementById('overlay').addEventListener('click', closePopup);
@@ -195,7 +195,7 @@ function handleKeyPress(event) {
 /**Function to show overall winner */
 function showWinner() {
     const resultElement = document.getElementById('winner');
-    const popupResult = document.getElementById('popupResult');
+    const popupResult = document.getElementById('popup-result');
 
     if (score.wins > score.losses) {
         resultElement.innerHTML = `${playerName} is the overall winner!<br>Do you want to play again?`;
@@ -209,18 +209,18 @@ function showWinner() {
 
 
     //Hide the rock, paper and scissors buttons
-    document.getElementById('rockButton').style.display = 'none';
-    document.getElementById('paperButton').style.display = 'none';
-    document.getElementById('scissorsButton').style.display = 'none';
+    document.getElementById('rock-button').style.display = 'none';
+    document.getElementById('paper-button').style.display = 'none';
+    document.getElementById('scissors-button').style.display = 'none';
 }
 
 //Reload page when play again or not
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById('startAgain').addEventListener('click', function () {
+    document.getElementById('start-again').addEventListener('click', function () {
         location.reload();
     });
-    document.getElementById('reloadButton').addEventListener('click', function () {
+    document.getElementById('reload-button').addEventListener('click', function () {
         alert("Thanks for playing!");
         location.reload();
         localStorage.removeItem('playerName');

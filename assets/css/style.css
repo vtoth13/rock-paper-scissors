@@ -148,7 +148,7 @@ button {
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
     body {
         display: flex;
         flex-direction: column;
@@ -158,8 +158,6 @@ button {
         color: black;
         display: none;
         position: fixed;
-        top: 10%;
-        left: 10%;
         height: 80%;
         width: 80%;
         max-height: 90vh;

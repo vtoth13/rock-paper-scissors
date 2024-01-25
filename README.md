@@ -47,22 +47,32 @@ Objective: The objective of Rock, Paper, and Scissors is to defeat your opponent
 3. Scissors cut paper, so if you choose scissors and your opponent chooses paper, you win.
 #### Ties: If both players choose the same item, the game is a tie, and it is usually played again to determine the winner.
 
-## Additional Features
-
-### Game Rules Popup
-Click the "Game Rules" button to view a popup with the rules of the game.
-
-### Score Display
-The current score (wins, losses, ties) is displayed on the screen.
-
-### Overall Winner
-After completing a set number of rounds (default is 10), the overall winner will be displayed in a popup. You can choose to play again or reload the page.
-
-### Keyboard Shortcuts
-Pressing the 'Esc' key closes the game rules popup.
-Play Again
+## Features
+- **Score Tracking:** The game keeps track of wins, losses, and ties for each player.
+- **Player Initialization:** Allows players to input their names to personalize the game experience.
+- **UI Display:** Results are displayed in the user interface (UI) for easy understanding.
+- **Moves Left Counter:** Displays the number of moves left for the player.
+- **Game Rules Popup:** Provides a popup with game rules for player reference.
+- **Responsive Design:** The game UI is responsive and adjusts well to different screen sizes.
+- **LocalStorage:** Utilizes localStorage to save and load the player's name and score between sessions.
+- **Random Computer Moves:** The computer opponent makes random moves (rock, paper, or scissors).
+- **Overall Winner Announcement:** At the end of the game, announce the overall winner or if it's a tie.
+- **Play Again Option:** Allows players to choose to play again, resetting the game.
+- **Esc Key Handling:** This enables closing the popup with the Esc key.
 
 #### If you want to play again, click the "Yes" button in the popup after determining the overall winner. If you decide not to play again, click the "No" button. By clicking the "No" button, the name is going to be removed, and a new player name can be entered.
+
+## Testing
+### Responsive Testing
+- [Mobile](documentation/chrome_phone.PNG)
+- [Desktop](documentation/safari_computer.png)
+
+### Compatibility Testing
+- [Google Chrome - Desktop](documentation/chrome_desktop.png)
+- [Safari - Desktop](documentation/safari_desktop.png)
+- [MS Edge - Desktop](documentation/ms_edge_desktop.jpeg)
+- [Google Chrome - Mobile](documentation/chrome_phone.PNG)
+- [Safari Mobile](documentation/safari_phone.PNG)
 
 ## Technologies Used
 
